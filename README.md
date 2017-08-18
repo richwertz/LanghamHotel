@@ -1,2 +1,2 @@
 # LanghamHotel
-Example of a responsive single page website
+Example of a responsive single page website. It's not supposed to be anything serious, just something for my portfolio. It is built using a development process that I created with Node.js. Feel free to download and try yourself. I won't be making regular updates to this repo, so if there is a plug-in or Node module that stops working or gets an NPM update, it is not likely to be reflected here. Comments are welcome- as is constructive feedback.
