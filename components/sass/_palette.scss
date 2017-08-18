@@ -1,0 +1,62 @@
+.a { 
+	background-color: $pink;
+	color: lighten($pink,20);
+}
+.b { 
+	background-color: $red;
+	color: lighten($red,20);
+}
+.c { 
+	background-color: $orange; 
+	color: lighten($orange,20);
+}
+.d { 
+	background-color: $yellow; 
+	color: lighten($yellow,20);
+}
+.e { 
+	background-color: $green; 
+	color: lighten($green,20);
+}
+.f { 
+	background-color: $blue; 
+	color: lighten($blue,20);
+}
+.g { 
+	background-color: $headColor; 
+	color: lighten($headColor,20);
+}
+.h { 
+	background-color: $purple; 
+	color: lighten($purple,20);
+}
+.i { 
+	background-color: $dark; 
+	color: lighten($dark,60);
+}
+
+$squareSize: 150px;
+
+#pal {
+	@include container;
+//	@include span(4 of 12);
+	div {
+	display: inline-block;
+//	padding: 10px;
+	padding: span(1 of 8);
+	text-align: center;
+	font: $palFont;
+	border: 5px solid $light;
+}
+
+	.pbx {
+		@include gallery(4 of 12);
+//		margin: gutter(4);
+		min-width: $squareSize;
+		min-height: $squareSize;
+//		margin: 5px;
+	}
+	
+//	display: none;
+}
+

@@ -1,0 +1,35 @@
+#attractions {
+	@include clearfix;
+	@include container (100%);
+	padding: 0;
+	@include backImage('../images/hotel/attractions.jpg');
+	
+	@include display-flex();
+	@include align-items(center);
+	@include justify-content(center);
+	
+	article {
+		@include container(80%);
+		@include breakpoint($medium) {
+			@include container(50%);
+		} //breakpoint
+		padding: 20px;
+		
+		/*
+		
+		And I think I need to remove this margin and just set it to margin-top: 200 and margin-bottom: 200. 
+		That way it won't give us the alignment to the left. 
+		What's happening is, it's overwriting what the containers are doing.
+		When we just set the margin at the top and bottom to be 200 and then we set the right and left to be zero. 
+		So it's clearing out what our containers are doing and that's not a good idea.
+		
+		*/
+		
+		margin-top: 200px;
+		margin-bottom: 200px;
+		background: rgba($light, .8);
+		@include border-radius(10px);
+		
+	} //article
+	
+}

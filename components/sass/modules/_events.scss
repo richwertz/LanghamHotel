@@ -1,0 +1,81 @@
+#events {
+	
+	padding: 0;
+	@include clearfix;
+	
+	.event {
+		position: relative;
+		@include container(100%);
+		@include breakpoint($small) {
+			@include span(6 of 12 0);
+			
+/*
+So I'm going to add a breakpoint here. Include break point small.
+So at the small size this is going to behave a little bit differently and what I want to see is include span 6 of 12 with 0 
+So the third number here which you haven't seen used before, means use six of the twelve columns.
+Because by default, we have 12 column layout.
+And this last number just tells the spacing in between the columns to be zero.
+
+In this case, what we want to do here and let me go ahead and save it. 
+And wait for the refresh. Looks like it's already applied, at least the padding.
+Looks like it might be taking a little bit longer to apply the columns.
+Let's make sure we didn't make an error.
+So we'll switch back over to this terminal and looks like I typed in something called spa there. 
+Not probably what I wanted to do. I wanted to do a span before we save this. 
+You can see that now the container over here goes full width that's 
+partially because of the container going to 100% here and 
+the padding clearing out to zero gets rid of some of the space right here.
+
+So let's go ahead and save this and we should see that columns take place now. So, there you go. 
+So you can see that now when the layout goes to a certain width, it splits it up into two columns. 
+The columns are a full width and when I go down to a smaller size,
+each one of these will be full screen which that looks pretty good. 
+Let's go ahead and finish up some of the other styles that we need. Obviously, some of this text is a little unreadable. 
+So, so go ahead and comment always a good idea.
+
+*/
+			
+		} //breakpoint Small
+		
+		.content {
+			position: absolute;
+			bottom: 0;
+			background: rgba($dark, .7);
+			padding: 30px;
+			color: $light;
+			font-weight: $thin;
+			line-height: 130%;
+			
+			h2 {
+				color: $light;
+				line-height: 1em;
+			} //h2
+			
+			p {
+				padding: 5px 0;
+			} //p
+			
+		} //.content
+		
+	} //event
+	
+/*
+ And then I'm going to add an event class because these items are tagged as events.
+ And I'm going to set the position of these elements to a relative. 
+ That's because I'm going to want to position the different elements next to each other in certain instances. 
+ Because we're going to want the notes in here to actually move to the bottom. 
+ So we're going to need to position these in an absolute manner aligned to the bottom of each photo.
+ In order to do that, the container has to be positioned as relative. So that's sort of a little layout trick.
+*/
+
+#businessmeetings {
+		@include backImage('../images/hotel/events_conference.jpg', to right, 0,0, 65% top);
+	} //business meetings
+	#weddings {
+		@include backImage('../images/hotel/events_wedding.jpg', to left, 0,0, 40% top);
+	} //weddings
+	
+} //events
+
+
+
